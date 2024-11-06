@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="#home" class="nav-link" data-section="home">Home</a></li>
+            <li><a href="#about" class="nav-link" data-section="about">About Me</a></li>
+            <li><a href="#skills" class="nav-link" data-section="skills">Skills</a></li> <!-- Skills added -->
+            <li><a href="#projects" class="nav-link" data-section="projects">Projects</a></li>
+            <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    
+
+    <div class="scroll-bar" id="scrollBar">↓</div>
+    
+    <!-- Home Section -->
+    <section class="header" id="home">
+        <h1 class="title">My Portfolio</h1>
+        <p class="subtitle">Web Designer</p>
+        <div class="profile-info">
+            <img src="profil.jpeg" alt="Your Photo" class="profile-img">
+            <div class="name-instagram">
+                <p class="instagram">Hello World, I,M</p>
+                <p class="name">Nur Hananda Aziz AlVito</p>
+                <p class="instagram">@nrhannda_</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section class="content" id="about">
+        <div class="section-title">
+            <h2>About Me</h2>
+        </div>
+        <div class="about-content">
+            <p class="description">Hello! I’m Nur Hananda Aziz AlVito, a 17-year-old aspiring web developer. I am currently studying at SMK Teuku Umar Semarang, majoring in Software Engineering (RPL).</p>
+            <p class="description">My journey into technology began early, and over time, my passion for coding and problem-solving has grown. I’ve learned a variety of programming languages such as PHP, CSS, HTML, NodeJS,Tailwind and JavaScript, and I’m always eager to explore new tools and technologies.</p>
+            <p class="description">I believe technology can make a real difference in the world, and that’s what motivates me to continue learning and improving my skills. I’m excited about the future of web development and hope to contribute to it with creative, functional, and user-friendly web applications.</p>
+            <p class="description">In my free time, I enjoy working on personal projects, experimenting with new technologies, and staying up-to-date with the latest trends in the tech world. I’m always looking for opportunities to grow, collaborate, and challenge myself in new and exciting ways.</p>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="content" id="skills">
+        <div class="section-title">
+            <h2>Skills</h2>
+        </div>
+        <div class="skills">
+            <div class="skill-card"><img src="html.png" alt="PHP" class="flip-img"><p>HTML</p></div>
+            <div class="skill-card"><img src="social.png" alt="CSS" class="flip-img"><p>CSS</p></div>
+            <div class="skill-card"><img src="php.png" alt="PHP" class="flip-img"><p>PHP</p></div>
+            <div class="skill-card"><img src="js.png" alt="JavaScript" class="flip-img"><p>JavaScript</p></div>
+            <div class="skill-card"><img src="wind.png" alt="Tailwind CSS" class="flip-img"><p>Tailwind</p></div>
+            <div class="skill-card"><img src="nodejs.png" alt="Node.js" class="flip-img"><p>Node.js</p></div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="content" id="projects">
+        <div class="section-title">
+            <h2>Projects</h2>
+        </div>
+        <div class="projects">
+            <div class="project-card left">
+                <img src="huha.jpg" alt="E-commerce Website" class="project-img">
+                <div class="overlay">
+                    <p>Project 1: E-commerce Website</p>
+                    <a href="#" class="project-link">View Project</a>
+                </div>
+            </div>
+            <div class="project-card right">
+                <img src="Screenshot.png" alt="Portfolio Website" class="project-img">
+                <div class="overlay">
+                    <p>Project 2: Portfolio Website</p>
+                    <a href="#" class="project-link">View Project</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+    <div class="content">
+        <h2>Contact</h2>
+        <div class="social-icons">
+            <a href="https://instagram.com/yourusername" target="_blank">
+                <img src="instagram.png" alt="Instagram">
+            </a>
+            <a href="https://github.com/yourusername" target="_blank">
+                <img src="github.png" alt="GitHub">
+            </a>
+            <a href="https://wa.me/yourphonenumber" target="_blank">
+                <img src="whatsapp.png" alt="WhatsApp">
+            </a>
+        </div>
+    </div>
+</section>
+
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,360 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #fff;
+    background: linear-gradient(135deg, #4b0082, #000);
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+/* Navbar Style */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li {
+    margin: 0 20px;
+}
+
+.navbar .nav-link {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2rem;
+    position: relative;
+    padding: 5px 10px;
+    transition: color 0.3s ease;
+}
+
+.navbar .nav-link:hover {
+    color: #ffd700;
+}
+
+.navbar .nav-link.active {
+    color: #ffd700;
+    font-weight: bold;
+}
+
+/* Underline Effect for Active Link */
+.navbar .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: #ffd700;
+    transition: width 0.3s ease;
+}
+
+.navbar .nav-link.active::after {
+    width: 100%;
+}
+
+
+/* Underline Effect for Active Link */
+.navbar .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: #ffd700;
+    transition: width 0.3s ease;
+}
+
+.navbar .nav-link.active::after {
+    width: 100%;
+}
+
+
+/* Scroll Bar */
+.scroll-bar {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 10;
+}
+
+/* Header */
+.header {
+    text-align: center;
+    padding: 100px 0;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.title {
+    font-size: 3rem;
+    animation: fadeInDown 1s ease;
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    margin-top: 10px;
+    animation: fadeInUp 1s ease;
+}
+
+.profile-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    animation: fadeInUp 2s ease;
+}
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #fff;
+    box-shadow: 0px 0px 20px 10px rgba(75, 0, 130, 0.7);
+    margin-right: 20px;
+}
+
+.name-instagram {
+    text-align: left;
+}
+
+.name {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.instagram {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+/* About Me Section */
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 50px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.section-title.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.content {
+    padding: 50px;
+    opacity: 0;
+    transform: translateY(100px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.content.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    animation: slideInLeft 1s ease forwards;
+}
+
+.description {
+    font-size: 1rem;
+    margin-top: 15px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+
+/* Skills Section */
+.skills {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.skill-card {
+    text-align: center;
+    perspective: 1000px;
+}
+
+.flip-img {
+    width: 100px;
+    height: 100px;
+    transition: transform 0.5s;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.skill-card:hover .flip-img {
+    transform: rotateY(180deg);
+}
+
+/* Projects Section */
+.projects {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.project-card {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.project-card.left {
+    transform: translateX(-100px);
+    opacity: 0;
+}
+
+.project-card.right {
+    transform: translateX(100px);
+    opacity: 0;
+}
+
+.project-card.show.left {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.project-card.show.right {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.project-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.3s ease;
+    text-align: center;
+    color: #fff;
+}
+
+.project-card:hover .overlay {
+    opacity: 1;
+}
+
+.project-link {
+    text-decoration: none;
+    color: #ffd700;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.project-card:hover .project-link {
+    color: #fff;
+}
+
+/* Contact Section */
+#contact {
+    padding: 50px 0;
+    height: 500px;
+    overflow-y: auto;  /* Menambahkan scroll vertikal */
+    position: relative;
+    transition: all 0.3s ease;  /* Efek smooth saat halaman di-scroll atau interaksi */
+}
+
+/* Styling untuk ikon media sosial */
+.social-icons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.social-icons a {
+    text-decoration: none;
+    display: inline-block;
+    transition: transform 0.3s ease, opacity 0.3s ease;  /* Animasi transform dan opacity */
+}
+
+.social-icons img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease;  /* Menambahkan transisi transform pada gambar */
+}
+
+/* Efek zoom-in saat hover atau klik */
+.social-icons a:hover img {
+    transform: scale(1.2);  /* Efek memperbesar ikon saat hover */
+    opacity: 0.8;  /* Mengurangi opacity saat hover untuk efek menarik */
+}
+
+/* Efek smooth saat ditekan atau diklik */
+.social-icons a:active img {
+    transform: scale(1.1);  /* Efek sedikit mengecil saat diklik */
+    opacity: 1;  /* Mengembalikan opacity setelah diklik */
+}
+
+
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideInLeft {
+    from { opacity: 0; transform: translateX(-100px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideInRight {
+    from { opacity: 0; transform: translateX(100px); }
+    to { opacity: 1; transform: translateX(0); }
+}
